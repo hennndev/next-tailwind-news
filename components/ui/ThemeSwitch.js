@@ -3,7 +3,7 @@ import { useTheme } from 'next-themes'
 import { IoMoon, IoSunny } from 'react-icons/io5'
 
 const ThemeSwitch = () => {
-    const { theme, setTheme } = useTheme()
+    const {systemTheme, theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
