@@ -10,6 +10,7 @@ const Navbar = () => {
     const handleClose = () => {
         setShowNav(false)
     }
+  
 
     return (
         <header className='dark:bg-dark dark:text-white bg-white py-[10px] px-[15px] w-full sticky top-0 z-20 transition-all duration-300 ease-in-out'>

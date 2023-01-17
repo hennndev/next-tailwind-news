@@ -5,12 +5,10 @@ import Footer from '../components/layout/Footer'
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-        <ThemeProvider enableSystem={false} attribute='class'>
+        <ThemeProvider enableSystem={true} attribute='class'>
             <Navbar/>
             <Component {...pageProps} />
             <Footer/>
         </ThemeProvider>
-    </>
   )
 }

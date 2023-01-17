@@ -10,16 +10,23 @@ const ThemeSwitch = () => {
         setMounted(true)
     }, [])
 
-    if (!mounted) {
-        return null
-    }
+    const renderThemeChanger= () => {
+        if(!mounted) return null;
+        const currentTheme = theme === "system" ? systemTheme : theme ;
 
-    return (
-        theme !== 'light' ? (
-            <IoSunny className="text-[19px] cursor-pointer mr-[15px] md:mr-0" onClick={() => setTheme('light')}/>
-        ) : (
-            <IoMoon className="text-[19px] cursor-pointer mr-[15px] md:mr-0" onClick={() => setTheme('dark')}/>
-        )
-    )
+        if(currentTheme ==="dark"){
+            return (
+                <IoSunny className="text-[19px] cursor-pointer mr-[15px] md:mr-0" onClick={() => setTheme('light')}/>
+            )
+        }
+
+        else {
+            return (
+                <IoMoon className="text-[19px] cursor-pointer mr-[15px] md:mr-0" onClick={() => setTheme('dark')}/>
+            )
+        }
+    };
+
+    return renderThemeChanger()
 }
 export default ThemeSwitch
